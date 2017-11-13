@@ -23,8 +23,8 @@ public class InputFicheros {
             int i = 1;
              while ((linea = br.readLine()) != null) {
              datos = linea.split(";");
-              String[] respuesta = {datos[1], datos[2], datos[3]};
-              preguntas = new Pregunta (datos[0], respuesta, Integer.parseInt(datos[4]), Integer.parseInt(datos[5]));
+              String[] respuesta = {datos[1], datos[2], datos[3]};// me guardo en un array las tres posibles respuestas
+              preguntas = new Pregunta (datos[0], respuesta, Integer.parseInt(datos[4]), Integer.parseInt(datos[5]));//me guardo la posicion del array 0 que es el de las preguntas el array de de respuestas, la posicion 4 que es el tipo de respuesta y la posicion que es el valo total de la respuesta
              preguntaLectura.add(preguntas);
              }
             
@@ -35,6 +35,7 @@ public class InputFicheros {
             if (br != null) {
                 try {
                     br.close();
+                    
                 } catch (IOException ex) {
                     
                     System.out.println("Error: " + ex.getMessage());

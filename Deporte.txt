@@ -5,6 +5,6 @@
 ¿Que selcción sudamericana tiene mas Copas America?;Uruguay;Brasil;Argentina;0;300
 ¿Que jugador en activo tiene mas títulos?;Roger Federer;Rafael Nadal;Novak Djokovic;0;300
 ¿Cuantas copas de europa tiene el A.C.Milan?;7;5;4;0;400
-¿Cuantas medallas tiene Michael Phelps?;20;21;22;2;400
+¿Cuantas medallas de oro tiene Michael Phelps?;20;21;23;2;400
 ¿Quien marco el gol que le dio la victoria de futbol en 2014 a Alemania en Maracana?;Muller;Gotze;Toni Kroos;1;500
 ¿Que entrenador de futbol tiene mas edad?;Louis van Gaal;Arsène Wenger;David Moyes;1;500
