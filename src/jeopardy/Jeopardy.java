@@ -1,6 +1,10 @@
 
 package jeopardy;
 
+import Views.Tablero;
+import java.awt.Dimension;
+import javax.swing.*;
+
 /*import java.io.BufferedReader;
 import java.io.IOException;
 import java.nio.file.Files;
@@ -18,6 +22,11 @@ public class Jeopardy {
     // private static final String nombreFichero="Deporte";
 
     public static void main(String[] args) {
+        Tablero tablero = new Tablero();
+        tablero.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        tablero.setVisible(true);
+        tablero.setSize(new Dimension(900, 500));
+        tablero.setTitle("Jeopardy");
     /* ArrayList<Pregunta> preguntaLectura = new ArrayList<>();
         Path path = Paths.get(nombreFichero + ".txt");
         BufferedReader br = null;

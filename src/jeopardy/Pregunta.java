@@ -15,7 +15,6 @@ public class Pregunta {
     }
 
     Pregunta() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
     public String getTexto() {
@@ -33,10 +32,4 @@ public class Pregunta {
     public int getValorRespuesta() {
         return valorRespuesta;
     }
-
-    @Override
-    public String toString() {
-        return "Pregunta{" + "texto=" + texto + ", respuestas=" + respuestas + ", respuestaCorrecta=" + respuestaCorrecta + ", valorRespuesta=" + valorRespuesta + '}';
-    }
-    
 }
