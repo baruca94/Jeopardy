@@ -1,15 +1,16 @@
 
 package Views;
 
+import Controller.Controlador;
 import java.awt.*;
 import javax.swing.*;
-	import javax.swing.border.Border;
+import javax.swing.border.Border;
  
 
 public class Tablero extends JFrame{
     public JLabel[] categoryNames = new JLabel[6];
     public JButton[][] buttonArray = new JButton[6][5];
-
+    private Controlador controlador;
     public Tablero(){
         setLayout(new GridLayout(6,5));
        
@@ -19,19 +20,7 @@ public class Tablero extends JFrame{
     private void addComponentsToPane(Container panel) {
     String[] nombreBoton = {"100", "200", "300", "400", "500"};
         String[] categoriaNombre = {"Deporte", "Historia", "Literatura", "Arte", "Geografia","Cultura"};
-   
-        /*
-    for (int i = 0; i < categoriaNombre.length; i++) {
-            JLabel categoria = new JLabel(categoriaNombre[i]);
-            categoria.setSize(120,100);
-            panel.add(categoria, BorderLayout.PAGE_START);
-            for (int j = 0; j < nombreBoton.length; j++) {
-                
-                buttonArray[i][j] = new JButton(nombreBoton[j]);
-                buttonArray[i][j].setSize(120, 100);
-                panel.add(buttonArray[i][j]);
-            }
-        }*/
+
     Border border = BorderFactory.createLineBorder(Color.BLACK, 1);
 
     for (int i = 0; i < categoriaNombre.length; ++i){
@@ -51,6 +40,25 @@ public class Tablero extends JFrame{
     }
     
     
-    
+    }
+     public void doubleRound() {
+        String[] doubleRoundNombreBotones = {"200", "400", "600", "800", "1000"};
+        for (int i = 0; i < doubleRoundNombreBotones.length; i++) {
+            for (int j = 0; j < 6; j++) {
+                buttonArray[i][j].setText(doubleRoundNombreBotones[i]);
+            }
+        }
+    }/*public void isDoubleRound() {
+        if (Jugador.getTurn() == 10) {
+            this.doubleRound();
+        }
+    }*/
+     public void addListeners(Controlador controller) {
+        for (int i = 0; i < 5; i++) {
+            for (int j = 0; j < 6; j++) {
+                buttonArray[i][j].addActionListener(controller);
+            }
+        }
+        this.addWindowListener(controller);
     }
 }

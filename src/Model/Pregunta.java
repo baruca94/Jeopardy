@@ -1,5 +1,5 @@
 
-package jeopardy;
+package Model;
 
 public class Pregunta {
     private String texto;
