@@ -6,17 +6,17 @@ public class Pregunta {
     private String[] respuestas;
     private int respuestaCorrecta;
     private int valorRespuesta;
+    private boolean respondida;
 
     public Pregunta(String texto, String[] respuestas, int respuestaCorrecta, int valorRespuesta) {
         this.texto = texto;
         this.respuestas = respuestas;
         this.respuestaCorrecta = respuestaCorrecta;
         this.valorRespuesta = valorRespuesta;
+        respondida = false;
     }
 
-    Pregunta() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
+    Pregunta() {}
 
     public String getTexto() {
         return texto;
@@ -34,6 +34,10 @@ public class Pregunta {
         return valorRespuesta;
     }
 
+    public void responderPregunta(){
+        respondida = true;
+    }
+    
     @Override
     public String toString() {
         return "Pregunta{" + "texto=" + texto + ", respuestas=" + respuestas + ", respuestaCorrecta=" + respuestaCorrecta + ", valorRespuesta=" + valorRespuesta + '}';
